@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>머니루틴 고객 지원</title>
+  <meta name="description" content="머니루틴 앱 사용 중 도움이 필요하신가요? 자주 묻는 질문과 이메일 문의 안내입니다.">
+  <style>
+    :root {
+      --grad-start: #4776E6;
+      --grad-end: #8E54E9;
+      --text: #1f2333;
+      --text-muted: #6b7280;
+      --card-bg: rgba(255, 255, 255, 0.92);
+      --border: rgba(255, 255, 255, 0.6);
+      --shadow: 0 20px 40px rgba(71, 118, 230, 0.18);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      min-height: 100%;
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+                   "Pretendard", "Segoe UI", "Helvetica Neue", sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      background: linear-gradient(135deg, var(--grad-start), var(--grad-end));
+      background-attachment: fixed;
+      padding: 48px 16px;
+    }
+
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      color: #fff;
+      margin-bottom: 32px;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: #fff;
+      color: var(--grad-end);
+      font-weight: 800;
+      font-size: 26px;
+      margin-bottom: 16px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    header h1 {
+      font-size: 28px;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      opacity: 0.92;
+      font-size: 15px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-radius: 20px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+      margin-bottom: 20px;
+    }
+
+    .card h2 {
+      font-size: 18px;
+      letter-spacing: -0.01em;
+      margin-bottom: 16px;
+      color: var(--grad-end);
+    }
+
+    details {
+      border-bottom: 1px solid #ececf3;
+      padding: 14px 0;
+    }
+    details:last-of-type { border-bottom: none; }
+
+    details summary {
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 15px;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+    details summary::-webkit-details-marker { display: none; }
+    details summary::after {
+      content: "+";
+      color: var(--grad-end);
+      font-weight: 400;
+      font-size: 22px;
+      transition: transform 0.2s ease;
+    }
+    details[open] summary::after {
+      content: "−";
+    }
+
+    details p {
+      padding-top: 10px;
+      color: var(--text-muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .contact-email {
+      display: inline-block;
+      margin-top: 6px;
+      padding: 12px 18px;
+      background: linear-gradient(135deg, var(--grad-start), var(--grad-end));
+      color: #fff;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 15px;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .contact-email:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 20px rgba(71, 118, 230, 0.35);
+    }
+
+    .contact-note {
+      color: var(--text-muted);
+      font-size: 13px;
+      margin-top: 12px;
+    }
+
+    .meta {
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+    .meta strong { color: var(--text); font-weight: 600; }
+
+    footer {
+      text-align: center;
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 13px;
+      margin-top: 24px;
+    }
+    footer a {
+      color: #fff;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    footer p + p { margin-top: 6px; }
+
+    @media (max-width: 480px) {
+      body { padding: 32px 12px; }
+      header h1 { font-size: 24px; }
+      .card { padding: 22px; border-radius: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="logo" aria-hidden="true">₩</div>
+      <h1>머니루틴 고객 지원</h1>
+      <p>도움이 필요하신가요? 자주 묻는 질문을 먼저 확인해 보세요.</p>
+    </header>
+
+    <section class="card">
+      <h2>앱 정보</h2>
+      <p class="meta">
+        <strong>이름</strong> &nbsp;머니루틴<br>
+        <strong>버전</strong> &nbsp;1.0.0<br>
+        <strong>플랫폼</strong> &nbsp;iOS 15.0 이상 / Android
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>자주 묻는 질문</h2>
+
+      <details>
+        <summary>데이터를 백업하거나 복원하려면 어떻게 하나요?</summary>
+        <p>
+          앱의 <strong>설정 → 데이터 백업 / 복원</strong>에서 처리할 수 있습니다.
+          내보낸 백업 파일을 클라우드 드라이브에 저장해 두면 기기를 바꿔도 그대로
+          이어 쓸 수 있습니다.
+        </p>
+      </details>
+
+      <details>
+        <summary>결제일 알림이 오지 않습니다.</summary>
+        <p>
+          iOS 설정 → 알림 → 머니루틴에서 알림 권한이 켜져 있는지 먼저 확인해 주세요.
+          앱의 <strong>설정 → 납부일 알림</strong>에서 알림을 활성화하고
+          알림 시각을 다시 저장하면 곧바로 다음 결제일부터 발송됩니다.
+        </p>
+      </details>
+
+      <details>
+        <summary>새 기기로 데이터를 옮기는 방법은?</summary>
+        <p>
+          이전 기기에서 <strong>설정 → 데이터 백업 / 복원 → 백업 파일 내보내기</strong>로
+          파일을 만들고, 새 기기에서 머니루틴을 설치한 뒤
+          같은 화면에서 <strong>가져오기</strong>로 그 파일을 선택하시면 됩니다.
+        </p>
+      </details>
+
+      <details>
+        <summary>고정지출을 잘못 등록했어요.</summary>
+        <p>
+          <strong>고정지출 템플릿</strong> 화면에서 해당 항목을 탭하면 수정·삭제할
+          수 있습니다. 월별 화면에서 보이는 항목은 템플릿의 사본이므로,
+          템플릿을 수정하면 다음 달부터 자동 반영됩니다.
+        </p>
+      </details>
+
+      <details>
+        <summary>여러 결제를 한 번의 자동이체로 묶고 싶습니다.</summary>
+        <p>
+          월별 고정지출 화면에서 항목을 <strong>길게 눌러 선택</strong>한 뒤,
+          상단의 <strong>그룹 묶기</strong> 메뉴를 사용하시면 됩니다. 실제 카드 명세서
+          단위와 동일하게 보이도록 정리할 수 있습니다.
+        </p>
+      </details>
+
+      <details>
+        <summary>앱이 갑자기 종료되거나 동작이 이상합니다.</summary>
+        <p>
+          앱을 완전히 종료한 뒤 다시 실행해 보시고, 같은 증상이 반복되면
+          아래 이메일로 사용 중인 iOS 버전과 발생 시점을 알려주세요.
+          크래시 보고서가 있다면 함께 보내주시면 더 빠르게 확인할 수 있습니다.
+        </p>
+      </details>
+
+      <details>
+        <summary>내 데이터는 어디에 저장되나요?</summary>
+        <p>
+          모든 데이터는 사용자의 기기 내부 데이터베이스(SQLite)에만 저장됩니다.
+          별도의 서버 업로드나 회원가입이 필요하지 않습니다. 자세한 내용은
+          개인정보처리방침을 참고해 주세요.
+        </p>
+      </details>
+    </section>
+
+    <section class="card">
+      <h2>이메일 문의</h2>
+      <p class="meta">위에 답이 없거나 더 자세한 도움이 필요하시면 아래로 연락 주세요.</p>
+      <p>
+        <a class="contact-email" href="mailto:snowmaltea@gmail.com?subject=%5B%EB%A8%B8%EB%8B%88%EB%A3%A8%ED%8B%B4%5D%20%EB%AC%B8%EC%9D%98">
+          snowmaltea@gmail.com
+        </a>
+      </p>
+      <p class="contact-note">평일 기준 2-3일 이내에 답변드립니다. 사용 중인 기기·iOS 버전을 함께 알려주시면 도움이 됩니다.</p>
+    </section>
+
+    <footer>
+      <p>
+        <a href="https://snowmaltea.github.io/privacy-policy/money_routine_app.html">개인정보처리방침</a>
+      </p>
+      <p>© 2026 HONGJIN LEE. All rights reserved.</p>
+    </footer>
+  </main>
+</body>
+</html>
