@@ -3,21 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HONGJIN LEE · 앱 안내</title>
-  <meta name="description" content="HONGJIN LEE가 만든 앱들의 고객 지원과 개인정보처리방침 안내 페이지입니다.">
+  <title>snowmaltea · 앱 만드는 개발자</title>
+  <meta name="description" content="snowmaltea가 직접 만든 앱 모음입니다. 각 앱의 소개·다운로드·고객 지원·개인정보처리방침을 확인할 수 있습니다.">
+  <meta property="og:title" content="snowmaltea · 앱 만드는 개발자">
+  <meta property="og:description" content="커피와 코드로 직접 만든 앱들을 모아둔 곳이에요. ☕">
+  <meta property="og:image" content="snowmaltea.jpg">
+  <meta property="og:type" content="website">
   <style>
     :root {
-      --grad-start: #4776E6;
-      --grad-end: #8E54E9;
-      --text: #1f2333;
-      --text-muted: #6b7280;
-      --card-bg: rgba(255, 255, 255, 0.92);
-      --border: rgba(255, 255, 255, 0.6);
-      --shadow: 0 20px 40px rgba(71, 118, 230, 0.18);
+      --grad-start: #E3A867;
+      --grad-end: #BE703C;
+      --accent: #B5673A;
+      --text: #2a2320;
+      --text-muted: #7a6a5d;
+      --card-bg: rgba(255, 252, 248, 0.96);
+      --border: rgba(255, 255, 255, 0.65);
+      --shadow: 0 20px 40px rgba(120, 70, 35, 0.22);
     }
-
     * { box-sizing: border-box; margin: 0; padding: 0; }
-
     html, body {
       min-height: 100%;
       font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
@@ -26,142 +29,106 @@
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
     }
-
     body {
       background: linear-gradient(135deg, var(--grad-start), var(--grad-end));
       background-attachment: fixed;
-      padding: 48px 16px;
+      padding: 56px 16px;
     }
+    main { max-width: 640px; margin: 0 auto; }
 
-    main {
-      max-width: 720px;
-      margin: 0 auto;
+    /* ── Hero (개발자 브랜딩) ── */
+    .hero { text-align: center; color: #fff; margin-bottom: 36px; }
+    .avatar {
+      width: 148px; height: 148px;
+      border-radius: 32px;
+      border: 3px solid rgba(255, 255, 255, 0.9);
+      box-shadow: 0 18px 40px rgba(70, 40, 15, 0.32);
+      margin-bottom: 20px;
     }
-
-    header {
-      text-align: center;
-      color: #fff;
-      margin-bottom: 32px;
+    .hero h1 { font-size: 30px; letter-spacing: -0.02em; margin-bottom: 10px; }
+    .hero .tagline {
+      font-size: 16px; opacity: 0.96;
+      max-width: 420px; margin: 0 auto 4px;
     }
+    .hero .sub { font-size: 13.5px; opacity: 0.85; letter-spacing: 0.3px; }
 
-    header h1 {
-      font-size: 28px;
-      letter-spacing: -0.02em;
-      margin-bottom: 8px;
+    /* ── Apps ── */
+    .section-label {
+      color: rgba(255, 255, 255, 0.92);
+      font-size: 13px; font-weight: 700; letter-spacing: 0.8px;
+      text-transform: uppercase;
+      margin: 0 6px 14px;
     }
-
-    header p {
-      opacity: 0.92;
-      font-size: 15px;
-    }
-
     .app-card {
-      display: block;
-      text-decoration: none;
-      color: inherit;
+      display: flex; align-items: center; gap: 16px;
+      text-decoration: none; color: inherit;
       background: var(--card-bg);
       border: 1px solid var(--border);
       backdrop-filter: blur(8px);
       -webkit-backdrop-filter: blur(8px);
       border-radius: 20px;
-      padding: 24px 28px;
+      padding: 20px 22px;
       box-shadow: var(--shadow);
-      margin-bottom: 20px;
+      margin-bottom: 16px;
       transition: transform 0.15s ease, box-shadow 0.15s ease;
     }
     .app-card:hover {
       transform: translateY(-2px);
-      box-shadow: 0 26px 48px rgba(71, 118, 230, 0.26);
+      box-shadow: 0 26px 48px rgba(120, 70, 35, 0.30);
     }
-
-    .app-row {
-      display: flex;
-      align-items: center;
-      gap: 16px;
+    .app-icon {
+      width: 56px; height: 56px;
+      border-radius: 15px; flex: 0 0 auto;
+      box-shadow: 0 6px 16px rgba(120, 70, 35, 0.28);
     }
-
-    .app-logo {
-      flex: 0 0 auto;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 52px;
-      height: 52px;
-      border-radius: 14px;
-      background: linear-gradient(135deg, var(--grad-start), var(--grad-end));
-      color: #fff;
-      font-weight: 800;
-      font-size: 24px;
-    }
-
     .app-info { flex: 1 1 auto; }
-    .app-info h2 {
-      font-size: 18px;
-      letter-spacing: -0.01em;
-      margin-bottom: 2px;
-    }
-    .app-info p {
-      color: var(--text-muted);
-      font-size: 14px;
-    }
-
-    .app-links {
-      margin-top: 14px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-    .app-links a {
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--grad-end);
-      text-decoration: none;
-      padding: 6px 12px;
-      border: 1px solid #ececf3;
-      border-radius: 999px;
-      transition: background 0.15s ease;
-    }
-    .app-links a:hover { background: #f6f5fc; }
+    .app-info h2 { font-size: 18px; letter-spacing: -0.01em; margin-bottom: 2px; }
+    .app-info p { color: var(--text-muted); font-size: 14px; }
+    .app-arrow { flex: 0 0 auto; color: var(--accent); font-size: 22px; font-weight: 700; }
 
     footer {
-      text-align: center;
-      color: rgba(255, 255, 255, 0.85);
-      font-size: 13px;
-      margin-top: 24px;
+      text-align: center; color: rgba(255,255,255,0.88);
+      font-size: 13px; margin-top: 30px;
     }
+    footer a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+    footer p + p { margin-top: 6px; }
 
     @media (max-width: 480px) {
-      body { padding: 32px 12px; }
-      header h1 { font-size: 24px; }
-      .app-card { padding: 20px 22px; border-radius: 16px; }
+      body { padding: 40px 12px; }
+      .avatar { width: 124px; height: 124px; border-radius: 28px; }
+      .hero h1 { font-size: 25px; }
+      .app-card { padding: 16px 18px; border-radius: 16px; }
     }
   </style>
 </head>
 <body>
   <main>
-    <header>
-      <h1>앱 안내</h1>
-      <p>HONGJIN LEE가 만든 앱의 고객 지원과 개인정보처리방침입니다.</p>
+    <!-- ── 개발자 소개 ── -->
+    <header class="hero">
+      <img class="avatar" src="snowmaltea.jpg" alt="개발자 캐릭터 스노우말티">
+      <h1>snowmaltea</h1>
+      <p class="tagline">필요해서 직접 만든 앱들을 모아두는 곳이에요.</p>
+      <p class="sub">☕ Code &amp; Caffeine</p>
     </header>
 
-    <!-- 머니루틴 -->
-    <div class="app-card">
-      <div class="app-row">
-        <div class="app-logo" aria-hidden="true">₩</div>
-        <div class="app-info">
-          <h2>머니루틴</h2>
-          <p>고정지출·월별 가계 관리</p>
-        </div>
+    <!-- ── 앱 목록 ── -->
+    <p class="section-label">만든 앱</p>
+
+    <a class="app-card" href="money-routine/">
+      <img class="app-icon" src="money-routine/icon.png" alt="머니루틴 앱 아이콘">
+      <div class="app-info">
+        <h2>머니루틴</h2>
+        <p>구독·보험·통신비를 한곳에서 — 고정지출 관리 가계부</p>
       </div>
-      <div class="app-links">
-        <a href="money-routine/">고객 지원</a>
-        <a href="money-routine/privacy.html">개인정보처리방침</a>
-      </div>
-    </div>
-    <!-- 새 앱 추가 시 위 .app-card 블록을 복제하세요. -->
+      <span class="app-arrow" aria-hidden="true">›</span>
+    </a>
+
+    <!-- 새 앱을 출시하면 위 .app-card 블록을 복제해 추가하세요.
+         (예: <a class="app-card" href="<app-slug>/"> … </a>) -->
 
     <footer>
-      <p>© 2026 HONGJIN LEE. All rights reserved.</p>
+      <p>문의: <a href="mailto:snowmaltea@gmail.com">snowmaltea@gmail.com</a></p>
+      <p>© 2026 snowmaltea. All rights reserved.</p>
     </footer>
   </main>
 </body>
