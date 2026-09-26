@@ -9,17 +9,21 @@
   <meta property="og:description" content="커피와 코드로 직접 만든 앱들을 모아둔 곳이에요. ☕">
   <meta property="og:image" content="snowmaltea.jpg">
   <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0E0C0B">
+  <meta name="color-scheme" content="dark">
   <style>
     :root {
-      --grad-start: #E3A867;
-      --grad-end: #BE703C;
-      --accent: #B5673A;
-      --text: #2a2320;
-      --text-muted: #7a6a5d;
-      --card-bg: rgba(255, 252, 248, 0.96);
-      --border: rgba(255, 255, 255, 0.65);
-      --shadow: 0 20px 40px rgba(120, 70, 35, 0.22);
+      /* 웜 차콜 다크 — 커피 톤을 유지하되 눈부시지 않게 */
+      --grad-start: #241E1A;
+      --grad-end: #0E0C0B;
+      --accent: #E3A867;                        /* 기존 앰버를 액센트로 승격 */
+      --text: #F2EDE8;
+      --text-muted: #A2958A;
+      --card-bg: rgba(255, 250, 244, 0.055);    /* 살짝 떠 보이는 다크 서피스 */
+      --border: rgba(255, 240, 225, 0.11);
+      --shadow: 0 18px 38px rgba(0, 0, 0, 0.42);
     }
+    :root { color-scheme: dark; }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html, body {
       min-height: 100%;
@@ -41,8 +45,8 @@
     .avatar {
       width: 148px; height: 148px;
       border-radius: 32px;
-      border: 3px solid rgba(255, 255, 255, 0.9);
-      box-shadow: 0 18px 40px rgba(70, 40, 15, 0.32);
+      border: 3px solid rgba(255, 240, 225, 0.16);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
       margin-bottom: 20px;
     }
     .hero h1 { font-size: 30px; letter-spacing: -0.02em; margin-bottom: 10px; }
@@ -54,7 +58,7 @@
 
     /* ── Apps ── */
     .section-label {
-      color: rgba(255, 255, 255, 0.92);
+      color: var(--accent);
       font-size: 13px; font-weight: 700; letter-spacing: 0.8px;
       text-transform: uppercase;
       margin: 0 6px 14px;
@@ -74,12 +78,14 @@
     }
     .app-card:hover {
       transform: translateY(-2px);
-      box-shadow: 0 26px 48px rgba(120, 70, 35, 0.30);
+      background: rgba(255, 250, 244, 0.085);
+      border-color: rgba(255, 240, 225, 0.18);
+      box-shadow: 0 26px 48px rgba(0, 0, 0, 0.5);
     }
     .app-icon {
       width: 56px; height: 56px;
       border-radius: 15px; flex: 0 0 auto;
-      box-shadow: 0 6px 16px rgba(120, 70, 35, 0.28);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45);
     }
     .app-info { flex: 1 1 auto; }
     .app-info h2 { font-size: 18px; letter-spacing: -0.01em; margin-bottom: 2px; }
@@ -87,10 +93,10 @@
     .app-arrow { flex: 0 0 auto; color: var(--accent); font-size: 22px; font-weight: 700; }
 
     footer {
-      text-align: center; color: rgba(255,255,255,0.88);
+      text-align: center; color: var(--text-muted);
       font-size: 13px; margin-top: 30px;
     }
-    footer a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+    footer a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
     footer p + p { margin-top: 6px; }
 
     @media (max-width: 480px) {
