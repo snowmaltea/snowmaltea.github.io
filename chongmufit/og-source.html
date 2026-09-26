@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body { width:1200px; height:630px; overflow:hidden; }
+  body {
+    background: linear-gradient(135deg, #14876A 0%, #0B5643 100%);
+    font-family: "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    display: flex; align-items: center; gap: 62px;
+    padding-left: 108px;
+  }
+  .icon-tile {
+    width: 216px; height: 216px; border-radius: 52px;
+    background: #F7F5EE;                      /* 웜 베이지 — 랜딩 카드와 같은 톤 */
+    box-shadow: 0 22px 48px rgba(0,0,0,0.30);
+    display: flex; align-items: center; justify-content: center;
+    flex: 0 0 auto;
+  }
+  .icon { width: 168px; height: 168px; border-radius: 38px; }
+  h1 {
+    font-size: 88px; font-weight: 700; color: #fff;
+    letter-spacing: -0.03em; line-height: 1.05;
+    margin-bottom: 22px;
+  }
+  .tagline {
+    font-size: 37px; font-weight: 400; line-height: 1.42;
+    color: rgba(255,255,255,0.93); letter-spacing: -0.02em;
+    margin-bottom: 30px;
+  }
+  .pill {
+    display: inline-block;
+    background: rgba(255,255,255,0.20);
+    color: #fff; font-size: 28px; font-weight: 500;
+    letter-spacing: -0.01em;
+    padding: 15px 34px; border-radius: 999px;
+  }
+</style>
+</head>
+<body>
+  <div class="icon-tile"><img class="icon" src="icon.png" alt=""></div>
+  <div>
+    <h1>총무핏</h1>
+    <p class="tagline">회비 걷고, 맞추고, 나누는 일을<br>앱 하나에서</p>
+    <span class="pill">무료 &nbsp;·&nbsp; 광고 없음</span>
+  </div>
+</body>
+</html>
